@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.authdemo.tdd.NullInputUserServiceTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.102 s <<< FAILURE! -- in com.example.authdemo.tdd.NullInputUserServiceTest
-com.example.authdemo.tdd.NullInputUserServiceTest.loginNullUsername -- Time elapsed: 0.006 s <<< FAILURE!
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.094 s <<< FAILURE! -- in com.example.authdemo.tdd.NullInputUserServiceTest
+com.example.authdemo.tdd.NullInputUserServiceTest.loginNullUsername -- Time elapsed: 0.015 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
@@ -20,7 +20,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke "Object.hashCode()" bec
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
 	... 6 more
 
-com.example.authdemo.tdd.NullInputUserServiceTest.signupNullUsername -- Time elapsed: 0.003 s <<< FAILURE!
+com.example.authdemo.tdd.NullInputUserServiceTest.signupNullUsername -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
@@ -36,7 +36,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke "String.isBlank()" beca
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
 	... 6 more
 
-com.example.authdemo.tdd.NullInputUserServiceTest.loginNullPassword -- Time elapsed: 0.001 s <<< FAILURE!
+com.example.authdemo.tdd.NullInputUserServiceTest.loginNullPassword -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
