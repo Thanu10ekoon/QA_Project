@@ -1,0 +1,8 @@
+com\example\authdemo\user\UserService.class
+com\example\authdemo\user\AuthController.class
+com\example\authdemo\user\AuthController$LoginRequest.class
+com\example\authdemo\user\UserRepository.class
+com\example\authdemo\user\InMemoryUserRepository.class
+com\example\authdemo\user\User.class
+com\example\authdemo\user\AuthController$SignupRequest.class
+com\example\authdemo\AuthDemoApplication.class

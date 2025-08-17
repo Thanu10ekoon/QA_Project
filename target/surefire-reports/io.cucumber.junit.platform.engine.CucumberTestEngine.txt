@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: io.cucumber.junit.platform.engine.CucumberTestEngine
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.074 s <<< FAILURE! -- in io.cucumber.junit.platform.engine.CucumberTestEngine
+User authentication.Successful signup and login -- Time elapsed: 0.018 s <<< ERROR!
+io.cucumber.core.backend.CucumberBackendException: 
+Please annotate a glue class with some context configuration.
+
+For example:
+
+   @CucumberContextConfiguration
+   @SpringBootTest(classes = TestConfig.class)
+   public class CucumberSpringConfiguration { }
+Or: 
+
+   @CucumberContextConfiguration
+   @ContextConfiguration( ... )
+   public class CucumberSpringConfiguration { }
+	at io.cucumber.spring.SpringFactory.start(SpringFactory.java:102)
+	at io.cucumber.core.runner.Runner.buildBackendWorlds(Runner.java:134)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:70)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+User authentication.Failed login with wrong password -- Time elapsed: 0 s <<< ERROR!
+io.cucumber.core.backend.CucumberBackendException: 
+Please annotate a glue class with some context configuration.
+
+For example:
+
+   @CucumberContextConfiguration
+   @SpringBootTest(classes = TestConfig.class)
+   public class CucumberSpringConfiguration { }
+Or: 
+
+   @CucumberContextConfiguration
+   @ContextConfiguration( ... )
+   public class CucumberSpringConfiguration { }
+	at io.cucumber.spring.SpringFactory.start(SpringFactory.java:102)
+	at io.cucumber.core.runner.Runner.buildBackendWorlds(Runner.java:134)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:70)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
