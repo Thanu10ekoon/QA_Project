@@ -1,13 +1,13 @@
 
-## Commands
+# Commands
 
-# TDD
+## TDD
 mvn -Dtest="**/tdd/*Test.java" test
 
-# BDD
+## BDD
 mvn -Dtest=CucumberTest test
 
-## 1. Test-Driven Development (TDD) & Behavior-Driven Development (BDD)
+# 1. Test-Driven Development (TDD) & Behavior-Driven Development (BDD)
 
 For TDD there is an intentional bug in UserService.java file
         so when I run TDD test (UserServiceTest.java), it will fail (RED)
