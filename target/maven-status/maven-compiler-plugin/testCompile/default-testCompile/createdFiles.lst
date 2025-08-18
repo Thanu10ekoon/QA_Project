@@ -1,5 +1,4 @@
 com\example\authdemo\bdd\AuthStepDefs.class
 com\example\authdemo\tdd\UserServiceTest.class
-com\example\authdemo\bdd\CucumberTest.class
 com\example\authdemo\UserServiceTest.class
 com\example\authdemo\tdd\NullInputUserServiceTest.class

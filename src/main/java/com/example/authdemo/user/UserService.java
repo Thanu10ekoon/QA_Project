@@ -21,34 +21,10 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    // INTENTIONAL BUG (for TDD demo): removed null checks; will throw NPE or allow bad data
-    public User signup(String username, String rawPassword) {
-        
-        if (username.isBlank()) { // unsafe: username could be null
-            throw new IllegalArgumentException("Username required");
-        }
-        if (rawPassword == null || rawPassword.length() < 6) {
-            throw new IllegalArgumentException("Password must be at least 6 chars");
-        }
-        if (userRepository.existsByUsername(username)) {
-            throw new IllegalStateException("Username already taken");
-        }
-        String hash = passwordEncoder.encode(rawPassword);
-        User user = new User(username, hash);
-        userRepository.save(user);
-        return user;
-    }
-
-    public boolean login(String username, String rawPassword) {
-        // INTENTIONAL BUG: no explicit null guard; should raise IllegalArgumentException
-        return userRepository.findByUsername(username)
-                .map(u -> passwordEncoder.matches(rawPassword, u.getPasswordHash()))
-                .orElse(false);
-    }
-
-    // CORRECT IMPLEMENTATION 
+    // INTENTIONAL BUG : removed null checks; will throw NPE or allow bad data
     // public User signup(String username, String rawPassword) {
-    //     if (username == null || username.isBlank()) {
+        
+    //     if (username.isBlank()) {
     //         throw new IllegalArgumentException("Username required");
     //     }
     //     if (rawPassword == null || rawPassword.length() < 6) {
@@ -64,12 +40,37 @@ public class UserService {
     // }
 
     // public boolean login(String username, String rawPassword) {
-    //     if (username == null || rawPassword == null) {
-    //         throw new IllegalArgumentException("Username and password required");
-    //     }
+
+    //     // INTENTIONAL BUG: no explicit null guard; should raise IllegalArgumentException
     //     return userRepository.findByUsername(username)
     //             .map(u -> passwordEncoder.matches(rawPassword, u.getPasswordHash()))
     //             .orElse(false);
     // }
+
+    // CORRECT IMPLEMENTATION 
+    public User signup(String username, String rawPassword) {
+        if (username == null || username.isBlank()) {
+            throw new IllegalArgumentException("Username required");
+        }
+        if (rawPassword == null || rawPassword.length() < 6) {
+            throw new IllegalArgumentException("Password must be at least 6 chars");
+        }
+        if (userRepository.existsByUsername(username)) {
+            throw new IllegalStateException("Username already taken");
+        }
+        String hash = passwordEncoder.encode(rawPassword);
+        User user = new User(username, hash);
+        userRepository.save(user);
+        return user;
+    }
+
+    public boolean login(String username, String rawPassword) {
+        if (username == null || rawPassword == null) {
+            throw new IllegalArgumentException("Username and password required");
+        }
+        return userRepository.findByUsername(username)
+                .map(u -> passwordEncoder.matches(rawPassword, u.getPasswordHash()))
+                .orElse(false);
+    }
     
 }
